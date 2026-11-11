@@ -94,10 +94,10 @@ while not quit:
             else:
                 order_book['bids'].append(new_order)
         elif activity == 'sell':
-            if price < order_book['bids'][0]['price']:
-                order_book['bids'].insert[0, new_order]
+            if price < order_book['asks'][0]['price']:
+                order_book['asks'].insert(0, new_order)
             else:
-                order_book['bids'].append(new_order)
+                order_book['asks'].append(new_order)
         print('Order Placed!')
     elif query.lower() == 'quit':
         quit = True
